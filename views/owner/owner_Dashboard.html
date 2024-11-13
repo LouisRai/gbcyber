@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Admin Dashboard-Tables</title>
+    <title>O | Dashboard</title>
     <meta
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
       name="viewport"
@@ -623,58 +623,103 @@
 <!-- Start of the Container -->
 
         <div class="container">
-          <div class="page-inner">
-            <div class="page-header">
-              <ul class="breadcrumbs mb-3">
-                <li class="nav-home">
-                  <a href="#">
-                    <i class="icon-home"></i>
-                  </a>
-                </li>
-                <li class="separator">
-                  <i class="icon-arrow-right"></i>
-                </li>
-                <li class="nav-item">
-                  <a href="#">Dashboard</a>
-                </li>
-                <li class="separator">
-                  <i class="icon-arrow-right"></i>
-                </li>
-              </ul>
-            </div>
-            <div class="row">
+  <div class="page-inner">
+    <div class="page-header">
+      <ul class="breadcrumbs mb-3">
+        <li class="nav-home">
+          <a href="#">
+            <i class="icon-home"></i>
+          </a>
+        </li>
+        <li class="separator">
+          <i class="icon-arrow-right"></i>
+        </li>
+        <li class="nav-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="separator">
+          <i class="icon-arrow-right"></i>
+        </li>
+      </ul>
+    </div>
+    <div class="row">
 
-<!-- End of the page header -->
-             
-              <div class="col-md-6">
-                <div class="card">
-
-                  <div class="card-header">
-                    <div class="card-title">Line Chart</div>
-                  </div>
-                  <div class="card-body">
-                    <div class="chart-container">
-                      <canvas id="lineChart"></canvas>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-
-<!-- start footer -->
-        <footer class="footer">
-          <div class="container-fluid d-flex justify-content-between">
-            <p>
-            © All right reserved by <a target="_blank" href="https://www.grey-box.ca/project-cybercafe/">Grey-box</a> 2024.
-            </p>
+      <!-- Line Chart Section -->
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Line Chart</div>
           </div>
-        </footer>
-
-        <!-- End Footer -->
+          <div class="card-body">
+            <div class="chart-container">
+              <canvas id="lineChart"></canvas>
+            </div>
+          </div>
+        </div>
       </div>
 
+      <!-- User Data Table Section -->
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Top Users by Data Usage</div>
+          </div>
+          <div class="card-body">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>UID</th>
+                  <th>User Name</th>
+                  <th>Data Used (GB)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>John Doe</td>
+                  <td>120.5</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jane Smith</td>
+                  <td>98.2</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Michael Lee</td>
+                  <td>85.7</td>
+                </tr>
+                <!-- Add more rows as needed -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Number of Users Online Section -->
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <div class="alert alert-info text-center">
+          <strong>Number of Users Online: </strong><span id="onlineUsers">5</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Start Footer -->
+    <footer class="footer">
+      <div class="container-fluid d-flex justify-content-between">
+        <p>
+          © All right reserved by <a target="_blank" href="https://www.grey-box.ca/project-cybercafe/">Grey-box</a> 2024.
+        </p>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+  </div>
+</div>
+
+
 
     <!--   Core JS Files   -->
     <script src="../../assets/js/core/jquery-3.7.1.min.js"></script>
@@ -695,18 +740,13 @@
         type: "line",
         data: {
           labels: [
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
-            "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec",
+            "Sun",
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri",
+            "Sat",
           ],
           datasets: [
             {
@@ -722,7 +762,7 @@
               fill: true,
               borderWidth: 2,
               data: [
-                542, 480, 430, 550, 530, 453, 380, 434, 568, 610, 700, 900,
+                542 , 480, 430, 550, 530, 453, 380, 434, 568, 610, 700, 900,
               ],
             },
           ],
