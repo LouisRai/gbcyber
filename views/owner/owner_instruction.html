@@ -660,7 +660,9 @@
           <!-- End Navbar -->
         </div>
 
-<!-- Start of the Container -->
+<!-- Start of the inner Container -->
+
+ 
 
 <div class="container">
   <div class="page-inner">
@@ -681,7 +683,7 @@
           <i class="icon-arrow-right"></i>
         </li>
         <li class="nav-item">
-          <a href="#">Add/Edit Q&A</a>
+          <a href="#">Manage Instructions</a>
         </li>
         <li class="separator">
           <i class="icon-arrow-right"></i>
@@ -689,29 +691,47 @@
       </ul>
     </div>
     
-    <!-- Form for Adding/Editing Q&A -->
+    <!-- Instructions Table Section -->
     <div class="row">
       <div class="col-md-12">
         <div class="card">
-          <div class="card-header">
-            <div class="card-title" id="formTitle">Add New / Edit Q&A</div>
+          <div class="card-header d-flex justify-content-between">
+            <div class="card-title">Manage Instructions</div>
+            <button class="btn btn-primary" onclick="window.location.href='addEditInstruction.html'">Add New</button>
           </div>
           <div class="card-body">
-            <form id="qaForm" onsubmit="saveFaq(event)">
-              <input type="hidden" id="faqId">
-              <div class="form-group">
-                <label for="question">Question</label>
-                <input type="text" class="form-control" id="question" placeholder="Enter the question" required>
-              </div>
-              <div class="form-group">
-                <label for="answer">Answer</label>
-                <textarea class="form-control" id="answer" rows="3" placeholder="Enter the answer" required></textarea>
-              </div>
-              <div class="form-group text-right">
-                <button type="button" class="btn btn-secondary" onclick="window.history.back()">Cancel</button>
-                <button type="submit" class="btn btn-primary">Save</button>
-              </div>
-            </form>
+            <div class="table-responsive">
+              <table class="table table-striped" id="instructionTable">
+                <thead>
+                  <tr>
+                    <th>SN</th>
+                    <th>Description</th>
+                    <th>Image</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Ensure proper handling of sensitive materials.</td>
+                    <td><img src="sample1.jpg" alt="Instruction Image" style="width: 50px;"></td>
+                    <td>
+                      <button class="btn btn-warning btn-sm" onclick="editInstruction(1)">Edit</button>
+                      <button class="btn btn-danger btn-sm" onclick="removeRow(this)">Delete</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Follow safety guidelines at all times.</td>
+                    <td><img src="sample2.jpg" alt="Instruction Image" style="width: 50px;"></td>
+                    <td>
+                      <button class="btn btn-warning btn-sm" onclick="editInstruction(2)">Edit</button>
+                      <button class="btn btn-danger btn-sm" onclick="removeRow(this)">Delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
@@ -719,32 +739,22 @@
   </div>
 </div>
 
-<!-- JavaScript for Adding/Editing Q&A -->
+<!-- JavaScript -->
 <script>
-  // Populate form if editing
-  window.onload = function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const editId = urlParams.get('editId');
-    if (editId) {
-      // Mock data retrieval, replace with real data lookup
-      document.getElementById('formTitle').innerText = 'Edit Q&A';
-      document.getElementById('faqId').value = editId;
-      document.getElementById('question').value = 'Sample Question ' + editId; // Example
-      document.getElementById('answer').value = 'Sample Answer for question ' + editId; // Example
-    }
-  };
+  function removeRow(button) {
+    const row = button.parentElement.parentElement;
+    row.remove();
+  }
 
-  function saveFaq(event) {
-    event.preventDefault();
-    // Logic to save the FAQ (either add or update based on faqId)
-    alert('FAQ saved successfully!');
-    window.location.href = 'index.html'; // Redirect to main page (adjust as needed)
+  function editInstruction(id) {
+    window.location.href = `addEditInstruction.html?editId=${id}`;
   }
 </script>
 
 
 
 
+<!-- End of the inner container -->
 <!-- start footer -->
         <footer class="footer">
           <div class="container-fluid d-flex justify-content-between">
@@ -771,6 +781,62 @@
     <!-- Kaiadmin DEMO methods, don't include it in your project! -->
     <script src="../../assets/js/setting-demo2.js"></script>
 
-    
+    <script>
+      $(document).ready(function () {
+        $("#basic-datatables").DataTable({});
+
+        $("#multi-filter-select").DataTable({
+          pageLength: 5,
+          initComplete: function () {
+            this.api()
+              .columns()
+              .every(function () {
+                var column = this;
+                var select = $(
+                  '<select class="form-select"><option value=""></option></select>'
+                )
+                  .appendTo($(column.footer()).empty())
+                  .on("change", function () {
+                    var val = $.fn.dataTable.util.escapeRegex($(this).val());
+
+                    column
+                      .search(val ? "^" + val + "$" : "", true, false)
+                      .draw();
+                  });
+
+                column
+                  .data()
+                  .unique()
+                  .sort()
+                  .each(function (d, j) {
+                    select.append(
+                      '<option value="' + d + '">' + d + "</option>"
+                    );
+                  });
+              });
+          },
+        });
+
+        // Add Row
+        $("#add-row").DataTable({
+          pageLength: 5,
+        });
+
+        var action =
+          '<td> <div class="form-button-action"> <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task"> <i class="fa fa-edit"></i> </button> <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove"> <i class="fa fa-times"></i> </button> </div> </td>';
+
+        $("#addRowButton").click(function () {
+          $("#add-row")
+            .dataTable()
+            .fnAddData([
+              $("#addName").val(),
+              $("#addPosition").val(),
+              $("#addOffice").val(),
+              action,
+            ]);
+          $("#addRowModal").modal("hide");
+        });
+      });
+    </script>
   </body>
 </html>
