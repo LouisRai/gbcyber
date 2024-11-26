@@ -42,22 +42,32 @@ include('../asset_for_pages/header.php');
                   </div>
                 </div>
 
-    <div class="card">
-    <div class="card-header d-flex align-items-center justify-content-between">
-      <div class="card-title">Payments</div>
-      <div class="d-flex align-items-center">
-        <div class="form-check form-switch me-2" style="--bs-form-switch-width:60px;--bs-form-switch-height:24px">
-          <input class="form-check-input" type="checkbox" role="switch" id="switchSizeLargeChecked" checked />
+                <div class="card">
+    <div class="card-header">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="card-title">Payments</div>
+            <div class="info-button-wrapper">
+                <!-- Info button to show tooltip -->
+                <button class="info-button" aria-label="More Info" onclick="toggleTooltip()">
+                    <span>i</span>
+                </button>
+                <!-- Tooltip content -->
+                <div class="info-tooltip">
+                    This feature lets you use/disable the payments feature. When you enable this feature, this switches on the
+                    payment options for the regular users, which makes the users pay for the access to this service.
+                </div>
+            </div>
         </div>
-        <div class="position-relative">
-          <button class="info-button" aria-label="More Info">i</button>
-          <div class="info-tooltip">
-            This toggle enables or disables payment functionality.
-          </div>
+        <p>This toggle enables or disables payment functionality.</p>
+        <div class="form-check form-switch" style="--bs-form-switch-width:60px;--bs-form-switch-height:24px">
+            <input class="form-check-input" type="checkbox" role="switch" id="switchSizeLargeChecked" checked />
         </div>
-      </div>
     </div>
-  </div>
+</div>
+
+
+
+
 
                 <div class="card">
                   <div class="card-header">

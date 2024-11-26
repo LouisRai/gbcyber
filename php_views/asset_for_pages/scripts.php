@@ -61,3 +61,10 @@
 <script src="../../assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>
 <script src="../../assets/js/plugin/jsvectormap/world.js"></script>
 
+<script>
+    // JavaScript function to toggle tooltip visibility
+    function toggleTooltip() {
+        const tooltipWrapper = document.querySelector('.info-button-wrapper');
+        tooltipWrapper.classList.toggle('show-tooltip');
+    }
+</script>
