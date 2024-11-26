@@ -31,6 +31,35 @@
   <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
   <link rel="stylesheet" href="../../assets/css/plugins.min.css" />
   <link rel="stylesheet" href="../../assets/css/kaiadmin.min.css" />
+  <style>
+    .info-button {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      color: #007bff;
+      cursor: pointer;
+    }
+    .info-button:hover {
+      color: #0056b3;
+    }
+    .info-tooltip {
+      display: none;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #f8f9fa;
+      border: 1px solid #ced4da;
+      padding: 5px 10px;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      font-size: 0.875rem;
+      z-index: 1000;
+    }
+    .info-button:hover + .info-tooltip {
+      display: block;
+    }
+  </style>
 
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link rel="stylesheet" href="../../assets/css/demo.css" />
