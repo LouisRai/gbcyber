@@ -1,6 +1,6 @@
 <?php
 // Set the page title dynamically
-$pageTitle = "Add User - CyberCafe"; 
+$pageTitle = "Dashboard"; 
 
 // Include the header
 include('../asset_for_pages/header.php');

@@ -611,5 +611,6 @@
       </div>
       
       <!-- Start of the Container -->
-
+       
       <div class="container">
+          <div class="page-inner">
