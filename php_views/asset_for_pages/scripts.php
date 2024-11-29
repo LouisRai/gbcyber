@@ -62,3 +62,10 @@
 <script src="../../assets/js/plugin/jsvectormap/world.js"></script>
 
 <script src="../../assets/js/owner/feature_toggle.js"></script>
+<script src="../../assets/js/owner/faq_table.js"></script>
+<script src="../../assets/js/owner/faq_add_form.js"></script>
+<script src="../../assets/js/owner/instructions_add_edit_form.js"></script>
+<script src="../../assets/js/owner/instructions.js"></script>
+<script src="../../assets/js/owner/report.js"></script>
+<script src="../../assets/js/owner/user_table.js"></script>
+<script src="../../assets/js/owner/view_user.js"></script>
