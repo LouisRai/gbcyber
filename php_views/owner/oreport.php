@@ -1,6 +1,6 @@
 <?php
 // Set the page title dynamically
-$pageTitle = "Report Page"; 
+$pageTitle = "O - Report"; 
 
 // Include the header
 include('../asset_for_pages/header.php');

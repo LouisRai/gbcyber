@@ -1,6 +1,6 @@
 <?php
 // Set the page title dynamically
-$pageTitle = "Dashboard"; 
+$pageTitle = "O - Device Table"; 
 
 // Include the header
 include('../asset_for_pages/header.php');

@@ -1,6 +1,6 @@
 <?php
 // Set the page title dynamically
-$pageTitle = "Feature Toggle"; 
+$pageTitle = "O - Feature Toggle"; 
 
 // Include the header
 include('../asset_for_pages/header.php');

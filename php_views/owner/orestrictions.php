@@ -1,6 +1,6 @@
 <?php
 // Set the page title dynamically
-$pageTitle = "Restrictions Page"; 
+$pageTitle = "O - Restrictions Page"; 
 
 // Include the header
 include('../asset_for_pages/header.php');

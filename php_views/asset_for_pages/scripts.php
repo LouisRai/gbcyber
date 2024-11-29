@@ -69,3 +69,8 @@
 <script src="../../assets/js/owner/report.js"></script>
 <script src="../../assets/js/owner/user_table.js"></script>
 <script src="../../assets/js/owner/view_user.js"></script>
+<script src="../../assets/js/owner/ocharts_values.js"></script>
+<script src="../../assets/js/admin/choose_layout.js"></script>
+<script src="../../assets/js/admin/charts.js"></script>
+<script src="../../assets/js/admin/main_page_with_charts_and_tables.js"></script>
+<script src="../../assets/js/admin/table_samples.js"></script>
