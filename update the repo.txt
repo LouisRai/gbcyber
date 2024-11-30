@@ -1,0 +1,9 @@
+git remote add upstream https://github.com/LouisRai/gbcyber
+git remote -v
+git fetch upstream
+git merge upstream/master
+
+TO PUSH
+git add *
+git commit -m "I changed Bandwidth to Bandwidths and added 1 file"
+git push origin master
