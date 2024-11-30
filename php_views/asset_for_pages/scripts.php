@@ -61,3 +61,16 @@
 <script src="../../assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>
 <script src="../../assets/js/plugin/jsvectormap/world.js"></script>
 
+<script src="../../assets/js/owner/feature_toggle.js"></script>
+<script src="../../assets/js/owner/faq_table.js"></script>
+<script src="../../assets/js/owner/faq_add_form.js"></script>
+<script src="../../assets/js/owner/instructions_add_edit_form.js"></script>
+<script src="../../assets/js/owner/instructions.js"></script>
+<script src="../../assets/js/owner/report.js"></script>
+<script src="../../assets/js/owner/user_table.js"></script>
+<script src="../../assets/js/owner/view_user.js"></script>
+<script src="../../assets/js/owner/ocharts_values.js"></script>
+<script src="../../assets/js/admin/choose_layout.js"></script>
+<script src="../../assets/js/admin/charts.js"></script>
+<script src="../../assets/js/admin/main_page_with_charts_and_tables.js"></script>
+<script src="../../assets/js/admin/table_samples.js"></script>
