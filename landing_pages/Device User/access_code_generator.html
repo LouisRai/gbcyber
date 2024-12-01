@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Code Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #code {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <p>Generate:</p> 
+    
+    <button id="generateButton"><i style="font-size:24px" class="fa">&#xf021;</i></button>
+    <div id="code"></div>
+    <script>
+        function generateAccessCode(length) {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let accessCode = '';
+            for (let i = 0; i < length; i++) {
+                const randomIndex = Math.floor(Math.random() * characters.length);
+                accessCode += characters[randomIndex];
+            }
+            return accessCode;
+        }
+
+        document.getElementById('generateButton').addEventListener('click', function() {
+            const codeLength = 8; // You can change the length of the code here
+            const accessCode = generateAccessCode(codeLength);
+            document.getElementById('code').textContent = 'Generated Access Code: ' + accessCode;
+        });
+    </script>
+
+</body>
+</html>
