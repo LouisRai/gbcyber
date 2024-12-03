@@ -6,7 +6,6 @@ $pageTitle = "O - Add User";
 include('../asset_for_pages/header.php');
 ?>
 
-<div class="page-inner">
     <div class="page-header">
         <ul class="breadcrumbs mb-3">
             <li class="nav-home">
@@ -123,7 +122,6 @@ include('../asset_for_pages/header.php');
             </div>
         </div>
     </div>
-</div>
 
 <?php
 // Include the footer
