@@ -83,7 +83,7 @@ include('../asset_for_pages/header.php');
                               <div class="row">
                                 <div class="col-sm-12">
                                   <div class="form-group form-group-default">
-                                    <label>S.N.</label>
+                                    <label>User ID</label>
                                     <input
                                       id="sn"
                                       type="text"
@@ -105,7 +105,7 @@ include('../asset_for_pages/header.php');
                                 </div>
                                 <div class="col-md-6 pe-0">
                                   <div class="form-group form-group-default">
-                                    <label>Access Code</label>
+                                    <label>Status</label>
                                     <input
                                       id="addAccessCode"
                                       type="text"
@@ -116,7 +116,7 @@ include('../asset_for_pages/header.php');
                                 </div>
                                 <div class="col-md-6 pe-0">
                                   <div class="form-group form-group-default">
-                                    <label>Roll</label>
+                                    <label>Role</label>
                                     <input
                                       id="addRoll"
                                       type="text"
@@ -127,7 +127,7 @@ include('../asset_for_pages/header.php');
                                 </div>
                                 <div class="col-md-6">
                                   <div class="form-group form-group-default">
-                                    <label>Status</label>
+                                    <label>Edit/Delete</label>
                                     <input
                                       id="addStatus"
                                       type="text"
@@ -166,34 +166,28 @@ include('../asset_for_pages/header.php');
                       >
                         <thead>
                           <tr>
-                            <th>Select</th>
-                            <th>S.N.</th>
+                            <th>User ID</th>
                             <th>User Name</th>
-                            <th>Access Code</th>
-                            <th>Roll</th>
                             <th>Status</th>
+                            <th>Role</th>
                             <th style="width: 10%">Edit/Delete</th>
                           </tr>
                         </thead>
                         <tfoot>
                           <tr>
-                            <th>Select</th>
-                            <th>S.N.</th>
+                            <<th>User ID</th>
                             <th>User Name</th>
-                            <th>Access Code</th>
-                            <th>Roll</th>
                             <th>Status</th>
+                            <th>Role</th>
                             <th>Edit/Delete</th>
                           </tr>
                         </tfoot>
                         <tbody>
                           <tr>
-                            <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
-                            <td>1</td> <!-- S.N. -->
-                            <td>Tiger Nixon</td>
-                            <td>ABC12345</td> <!-- Access Code -->
+                            <td>Saniket</td> 
+                            <td>Aniket Saroha</td>
                             <td>Admin</td>
-                            <td>Active</td> <!-- Status -->
+                            <td>Active</td> 
                             <td>
                               <div class="form-button-action">
                                 <button
@@ -218,12 +212,38 @@ include('../asset_for_pages/header.php');
                             </td>
                           </tr>
                           <tr>
-                            <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
-                            <td>2</td>
-                            <td>Garrett Winters</td>
-                            <td>XYZ67890</td> <!-- Access Code -->
+                            <td>GBale</td> 
+                            <td>Gareth Bale</td>
+                            <td>Admin</td>
+                            <td>Active</td>
+                            <td>
+                              <div class="form-button-action">
+                                <button
+                                  type="button"
+                                  data-bs-toggle="tooltip"
+                                  title=""
+                                  class="btn btn-link btn-primary btn-lg"
+                                  data-original-title="Edit Task"
+                                >
+                                  <i class="fa fa-edit"></i>
+                                </button>
+                                <button
+                                  type="button"
+                                  data-bs-toggle="tooltip"
+                                  title=""
+                                  class="btn btn-link btn-danger"
+                                  data-original-title="Remove"
+                                >
+                                  <i class="fa fa-times"></i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>RLouis</td> 
+                            <td>Louis Rai</td>
                             <td>Regular User</td>
-                            <td>Inactive</td> <!-- Status -->
+                            <td>Inactive</td>
                             <td>
                               <div class="form-button-action">
                                 <button

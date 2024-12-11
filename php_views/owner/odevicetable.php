@@ -81,7 +81,7 @@ include('../asset_for_pages/header.php');
                               <div class="row">
                                 <div class="col-sm-12">
                                   <div class="form-group form-group-default">
-                                    <label>S.N.</label>
+                                    <label>User ID</label>
                                     <input
                                       id="sn"
                                       type="text"
@@ -92,7 +92,7 @@ include('../asset_for_pages/header.php');
                                 </div>
                                 <div class="col-sm-12">
                                   <div class="form-group form-group-default">
-                                    <label>User Name</label>
+                                    <label>Device ID</label>
                                     <input
                                       id="addName"
                                       type="text"
@@ -103,7 +103,7 @@ include('../asset_for_pages/header.php');
                                 </div>
                                 <div class="col-md-6 pe-0">
                                   <div class="form-group form-group-default">
-                                    <label>Access Code</label>
+                                    <label>Device Status</label>
                                     <input
                                       id="addAccessCode"
                                       type="text"
@@ -114,7 +114,7 @@ include('../asset_for_pages/header.php');
                                 </div>
                                 <div class="col-md-6 pe-0">
                                   <div class="form-group form-group-default">
-                                    <label>Roll</label>
+                                    <label>Data Used</label>
                                     <input
                                       id="addRoll"
                                       type="text"
@@ -125,7 +125,7 @@ include('../asset_for_pages/header.php');
                                 </div>
                                 <div class="col-md-6">
                                   <div class="form-group form-group-default">
-                                    <label>Status</label>
+                                    <label>Edit/Delete</label>
                                     <input
                                       id="addStatus"
                                       type="text"
@@ -164,34 +164,28 @@ include('../asset_for_pages/header.php');
                       >
                         <thead>
                           <tr>
-                            <th>Select</th>
-                            <th>S.N.</th>
-                            <th>Device Name</th>
-                            <th>Data Usage</th>
-                            <th>MAC Address</th>
+                            <th>User ID</th>
+                            <th>Device ID</th>
                             <th>Device Status</th>
+                            <th>Data Used</th>
                             <th style="width: 10%">Edit/Delete</th>
                           </tr>
                         </thead>
                         <tfoot>
                           <tr>
-                            <th>Select</th>
-                            <th>S.N.</th>
-                            <th>Device Name</th>
-                            <th>Data Usage</th>
-                            <th>MAC Address</th>
+                            <th>User ID</th>
+                            <th>Device ID</th>
                             <th>Device Status</th>
+                            <th>Data Used</th>
                             <th>Edit/Delete</th>
                           </tr>
                         </tfoot>
                         <tbody>
                           <tr>
-                            <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
-                            <td>1</td> <!-- S.N. -->
-                            <td>Chinmay's iPhone</td>
-                            <td>47 GB</td> <!-- Access Code -->
-                            <td>11:22:33:44:55:66</td>
-                            <td>Active</td> <!-- Status -->
+                            <td>SAniket</td> 
+                            <td>XXX123</td>
+                            <td>Active</td> 
+                            <td>21 GB</td>
                             <td>
                               <div class="form-button-action">
                                 <button
@@ -216,12 +210,10 @@ include('../asset_for_pages/header.php');
                             </td>
                           </tr>
                           <tr>
-                            <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
-                            <td>2</td>
-                            <td>Aniket's Macbook</td>
-                            <td>33 GB</td> <!-- Access Code -->
-                            <td>11:22:33:44:55:77</td>
-                            <td>Inactive</td> <!-- Status -->
+                            <td>CSudeep</td> 
+                            <td>XXX456</td>
+                            <td>Inactive</td> 
+                            <td>12 GB</td>
                             <td>
                               <div class="form-button-action">
                                 <button
